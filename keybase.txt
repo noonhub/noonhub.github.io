@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/noonan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://noonan.cc
+  * I am noonan (https://keybase.io/noonan) on keybase.
+  * I have a public key with fingerprint F4DC 9380 5325 F9D6 A4DB  EFAE 51A1 285A 5D02 3D95
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "f4dc93805325f9d6a4dbefae51a1285a5d023d95",
+            "host": "keybase.io",
+            "key_id": "51a1285a5d023d95",
+            "kid": "0101d884407d101a189e4b3e45267e0633979c930619a1b94facb4a2f419724fe4200a",
+            "uid": "fa7fbd669e6ee49ac2c47b49325d3f19",
+            "username": "noonan"
+        },
+        "service": {
+            "hostname": "noonan.cc",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1427759010,
+    "expire_in": 157680000,
+    "prev": "c64a330c0b1b2c9664debcab9a5ea3f8f180d1f4142e2ca02f2795a451ca27f6",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMIXAnicbVJrSFRBFF5XK12RIv+kPyxuGBYq9zH3MRuVKEhRWBSikCVz585db6v3
+brur6yob0QuKHj+SHhSFj9AgMJMMFCJNytoochMEjTDQFcpMkGItorlSP4Lmz8z5
+zvd9c87hDGckO1xJjj1XfANvkmNJ0cGt9Y7yrA9tzYxqaWHG3cx4yfKlG6aH+H1+
+wwwybkYHGoaCwooCL+pQkxDQVKIjInKI4xURiRrLCxoUmXymxgrYCmqjogApNCyK
+0aDa0Cj6H753OcFyLKcpCgCsrNEn4hRIgCoQIPKSTFhJEKAMaQmsxEHEqRDoCKsA
+8TrgoMwDnQCeZRG1q1+205Gsq5okQSIRAiDCPAayCiAtXxN0DtrEAPGbqI5QtmlZ
+JjKZSD5DsQYDE3sAdh//5AsxpjKf3wpa2KqlcE0w6HPbqmDYZ9NCRK3+Y1CtGqZG
+J0gFDcQfMCyTcXOUiYOG7cgBXpZFSJvOZ0ijz/CTasNmiLKksPTY35AGaoklgASB
+xazKqTyGkgQ0omKkQiQSJOiKzimsxtEhAJ7wGLG8zstQREDkMOJlXWLslo6aFuMW
+aJnIQy0DhsdEwXo/YSJDT6pSHEkux8oVTnsHHK60NX83Y7Yq1REfyvs2F2n5tenu
+63S053QibXF/sRAf2Xy7c7TyXEXreGN49cDJvvC9jWXluVnR1qw+8jn2Mzb9VpD3
+Ns1nX7uj9Lgmy3Z3t/c5M49khKIncufSiwet1T+mdiUKj7/omS/smljTMpb3uOjB
++qpb+SfjixUk4t15IvVM1LUQy3zWf/7AhYyhU+jjLzHEJJYmZvUC76dXnQXTN8db
+Og46YI6vcl3JKI5NDdc+Xxt1vuz/kn3/64hz9N2lDcemLnbMbPPEdyx2nwULN91P
+H30vff/wRu+qLYn6rjHf1bu9TXimN9QYOty2PSIeune9SAfijsv7mhZKO0raK1M8
+OUt1k/HfQgAteQ==
+=kPj/
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/noonan
+
+==================================================================
+
