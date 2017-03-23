@@ -20,28 +20,18 @@
             <h2>Deep Link Testing Page</h2>
         </div>
         <div>
-            <h3>Native uber:// links</h3>
-            <a href="uber-nightly://?action=setPickup&dropoff[formatted_address]=1455%20Market%20St%20San%20Francisco%20CA%2094103&dropoff[latitude]=37.77&dropoff[longitude]=-122.41">
-                setPickup,dropoff[formatted_address][latitude][longitude]</a>
-        </div>
-        <div>
-            <h3>Co-Branded</h3>
-            <a href="uber://?action=setPickup&pickup=my_location&client_id=vZyMQGzF8Sisfjp0AiGv2h6jx4O5hsWe&dropoff[nickname]=Canteen&dropoff[formatted_address]=115%20Broadway,%20New%20York,%20NY&dropoff[latitude]=40.708882&dropoff[longitude]=-74.0114326&partner_deeplink=http://noonan.cc&link_text=Go%20back%20to%20the%20event%20page">Wombat Co-Branded</a>
+            <h3>Native Deep Links (uber://)</h3>
+            <a href="uber://?action=setPickup&dropoff[formatted_address]=1455%20Market%20St%20San%20Francisco%20CA%2094103&dropoff[latitude]=37.77&dropoff[longitude]=-122.41">
+                uber://action=setPickup&dropoff[formatted_address][latitude][longitude]</a>
             <br>
-            <a href="uber://?reengagement=1&publisher_id=310889&invoke_id=280819&agency_id=1787">MAT Test</a>
+            <a href="uber://?action=applyPromo&promo=foo">uber://?action=applyPromo&promo=foo</a>
         </div>
-        <div>
             <h3>Universal Deep Links https://m.uber.com/ul</h3>
-            <a href="https://m.uber.com/ul?action=setPickup&dropoff[latitude]=37.762945&dropoff[longitude]=-122.4191497&dropoff[nickname]=Foo%20Bar">
-                setPickup, dropoff[latitude][longitude][nickname]</a>
+            <a href="https://m.uber.com/ul?action=applyPromo&promo=foo">
+                https://m.uber.com/ul?action=applyPromo&promo=foo</a>
             <br>
             <a href="https://m.uber.com/ul?action=setPickup&pickup[latitude]=37.762945&pickup[longitude]=-122.4191497&pickup[nickname]Baz%20Club&pickup[formatted_address]=122%20Baz%20Street&dropoff[latitude]=37.762845&dropoff[longitude]=-122.4191497&dropoff[nickname]=Foo%20Bar&dropoff[formatted_address]=1455%20Market%20St%2C%20San%20Francisco%2C%20CA%2094103">
                 setPickup, pickup[latitude][longitude][nickname][formatted_address], dropoff[latitude][longitude][nickname][formatted_address]</a>
-        </div>
-        <div>
-            <h3>PP Test</h3>
-            <a href="uber://?action=setPickup&&pickup=my_location&&client_id=vZyMQGzF8Sisfjp0AiGv2h6jx4O5hsWe&&dropoff[nickname]=&&dropoff[formatted_address]=115%20Broadway,%20New%20York,%20NY&&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&&dropoff[latitude]=40.708882&&dropoff[longitude]=-74.0114326&&partner_deeplink=https://earth.paperlesspost.com/events/18914843-22a45fef/replies/public&&link_text=Go back to the event page">
-            setPickup, co-branded w/ html call back</a>
         </div>
     </div>
 </div>
