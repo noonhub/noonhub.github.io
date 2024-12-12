@@ -1,2 +1,4 @@
 User-agent: *
+User-agent: AdsBot-Google
 Disallow: *resume*
+Disallow: /marley/
