@@ -1,171 +1,82 @@
 <!DOCTYPE html>
-<html>
-<body>
-<script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
-<script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
-<script src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
-<div id="mapdiv" style="width: 1000px; height: 450px;"></div>
-<div style="width: 1000px; font-size: 70%; padding: 5px 0; text-align: center; background-color: #535364; margin-top: 1px; color: #B4B4B7;"><a href="https://www.amcharts.com/visited_countries/" style="color: #B4B4B7;">Create your own visited countries map</a> or check out the <a href="https://www.amcharts.com/" style="color: #B4B4B7;">JavaScript Charts</a>.</div>
-<script type="text/javascript">
-var map = AmCharts.makeChart("mapdiv",{
-type: "map",
-theme: "dark",
-projection: "mercator",
-panEventsEnabled : true,
-backgroundColor : "#535364",
-backgroundAlpha : 1,
-zoomControl: {
-zoomControlEnabled : true
-},
-dataProvider : {
-map : "worldHigh",
-getAreasFromMap : true,
-areas :
-[
-	{
-		"id": "BE",
-		"showAsSelected": true
-	},
-	{
-		"id": "CZ",
-		"showAsSelected": true
-	},
-	{
-		"id": "FR",
-		"showAsSelected": true
-	},
-	{
-		"id": "DE",
-		"showAsSelected": true
-	},
-	{
-		"id": "IE",
-		"showAsSelected": true
-	},
-	{
-		"id": "IT",
-		"showAsSelected": true
-	},
-	{
-		"id": "NL",
-		"showAsSelected": true
-	},
-	{
-		"id": "PT",
-		"showAsSelected": true
-	},
-	{
-		"id": "RU",
-		"showAsSelected": true
-	},
-	{
-		"id": "ES",
-		"showAsSelected": true
-	},
-	{
-		"id": "CH",
-		"showAsSelected": true
-	},
-	{
-		"id": "GB",
-		"showAsSelected": true
-	},
-	{
-		"id": "VA",
-		"showAsSelected": true
-	},
-	{
-		"id": "AW",
-		"showAsSelected": true
-	},
-	{
-		"id": "BS",
-		"showAsSelected": true
-	},
-	{
-		"id": "VG",
-		"showAsSelected": true
-	},
-	{
-		"id": "CA",
-		"showAsSelected": true
-	},
-	{
-		"id": "MX",
-		"showAsSelected": true
-	},
-	{
-		"id": "PR",
-		"showAsSelected": true
-	},
-	{
-		"id": "US",
-		"showAsSelected": true
-	},
-	{
-		"id": "VI",
-		"showAsSelected": true
-	},
-	{
-		"id": "AR",
-		"showAsSelected": true
-	},
-	{
-		"id": "BR",
-		"showAsSelected": true
-	},
-	{
-		"id": "CL",
-		"showAsSelected": true
-	},
-	{
-		"id": "PE",
-		"showAsSelected": true
-	},
-	{
-		"id": "ZA",
-		"showAsSelected": true
-	},
-	{
-		"id": "CN",
-		"showAsSelected": true
-	},
-	{
-		"id": "IN",
-		"showAsSelected": true
-	},
-	{
-		"id": "JP",
-		"showAsSelected": true
-	},
-	{
-		"id": "NP",
-		"showAsSelected": true
-	},
-	{
-		"id": "TH",
-		"showAsSelected": true
-	},
-	{
-		"id": "AE",
-		"showAsSelected": true
-	},
-	{
-		"id": "AU",
-		"showAsSelected": true
-	}
-]
-},
-areasSettings : {
-autoZoom : true,
-color : "#B4B4B7",
-colorSolid : "#84ADE9",
-selectedColor : "#84ADE9",
-outlineColor : "#666666",
-rollOverColor : "#9EC2F7",
-rollOverOutlineColor : "#000000"
-}
-});
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Countries Andrew Noonan has visited, visualised on an interactive map.">
+  <title>Travel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="canonical" href="https://noonhub.github.io/travel/">
+  <script src="/js/site.js" defer></script>
+  <script src="https://www.amcharts.com/lib/3/ammap.js" defer></script>
+  <script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" defer></script>
+  <script src="https://www.amcharts.com/lib/3/themes/dark.js" defer></script>
+</head>
+<body class="page-travel" data-nav-current="travel">
+<div data-include="/partials/header.html"></div>
+<main>
+  <section class="hero hero--aventura" id="map-intro">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">Travel Log</h1>
+      <p class="hero__subtitle">A living snapshot of the places I've explored across the globe.</p>
+    </div>
+  </section>
+  <section class="map-wrapper">
+    <div class="map-wrapper__inner">
+      <div id="mapdiv" role="presentation" aria-hidden="true"></div>
+      <p class="visually-hidden">Visited countries: Belgium, Czechia, France, Germany, Ireland, Italy, Netherlands, Portugal, Russia, Spain, Switzerland, United Kingdom, Vatican City, Aruba, Bahamas, British Virgin Islands, Canada, Mexico, Puerto Rico, United States, U.S. Virgin Islands, Argentina, Brazil, Chile, Peru, South Africa, China, India, Japan, Nepal, Thailand, United Arab Emirates, Australia.</p>
+      <p class="map-note">Map rendered with <a href="https://www.amcharts.com/">amCharts</a>. Data reflects countries visited to date.</p>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Andrew Noonan. All rights reserved.</p>
+</footer>
+<script>
+  window.addEventListener('load', function () {
+    if (!window.AmCharts || !window.AmCharts.makeChart) {
+      return;
+    }
+
+    const visitedCountries = [
+      'BE', 'CZ', 'FR', 'DE', 'IE', 'IT', 'NL', 'PT', 'RU', 'ES', 'CH', 'GB', 'VA',
+      'AW', 'BS', 'VG', 'CA', 'MX', 'PR', 'US', 'VI', 'AR', 'BR', 'CL', 'PE', 'ZA',
+      'CN', 'IN', 'JP', 'NP', 'TH', 'AE', 'AU'
+    ];
+
+    window.AmCharts.makeChart('mapdiv', {
+      type: 'map',
+      theme: 'dark',
+      projection: 'mercator',
+      panEventsEnabled: true,
+      backgroundColor: '#0b0b0b',
+      backgroundAlpha: 1,
+      zoomControl: {
+        zoomControlEnabled: true
+      },
+      dataProvider: {
+        map: 'worldHigh',
+        getAreasFromMap: true,
+        areas: visitedCountries.map(function (id) {
+          return { id: id, showAsSelected: true };
+        })
+      },
+      areasSettings: {
+        autoZoom: true,
+        color: '#2e4053',
+        colorSolid: '#84ADE9',
+        selectedColor: '#84ADE9',
+        outlineColor: '#202b33',
+        rollOverColor: '#9EC2F7',
+        rollOverOutlineColor: '#000000'
+      }
+    });
+  });
 </script>
 </body>
 </html>
