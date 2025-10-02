@@ -163,51 +163,37 @@ main {
   text-align: center;
   padding: 4rem 1.5rem;
   overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed, fixed;
 }
 
 .hero--home {
   background-image: url('../img/cham-desktop.png');
-  background-size: cover, cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed, fixed;
-}
-
-@media (max-width: 768px) {
-  .hero--home {
-    background-image: url('../img/cham-mobile.png');
-  }
 }
 
 .hero--travel {
   background-image: url('../img/orc-desktop.png');
-  background-size: cover, cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed, fixed;
-}
-
-@media (max-width: 768px) {
-  .hero--travel {
-    background-image: url('../img/orc-mobile.png');
-  }
-}
-
-.hero--aventura {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .hero--noonisms {
   background-image: url('../img/arches-desktop.png');
-  background-size: cover, cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-attachment: fixed, fixed;
 }
 
 @media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll, scroll;
+  }
+  
+  .hero--home {
+    background-image: url('../img/cham-mobile.png');
+  }
+
+  .hero--travel {
+    background-image: url('../img/orc-mobile.png');
+  }
+
   .hero--noonisms {
     background-image: url('../img/arches-mobile.png');
   }
@@ -443,10 +429,6 @@ main {
     align-items: flex-start;
     padding: 1.5rem 1.5rem 1rem;
     gap: 1rem;
-  }
-
-  .hero--home {
-    background-attachment: scroll;
   }
 
   .social-list {
