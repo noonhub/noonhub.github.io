@@ -174,7 +174,7 @@ main {
 }
 
 .hero--travel {
-  background-image: url('../img/arches.jpeg');
+  background-image: url('../img/arches.jpg');
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -188,7 +188,7 @@ main {
 }
 
 .hero--noonisms {
-  background-image: url('../img/bg-masthead.jpg');
+  background-image: url('../img/desert-tall.jpg');
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: center;
