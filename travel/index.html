@@ -19,7 +19,7 @@
 <body class="page-travel" data-nav-current="travel">
 <div data-include="/partials/header.html"></div>
 <main>
-  <section class="hero hero--aventura" id="map-intro">
+  <section class="hero hero--travel" id="map-intro">
     <div class="hero__overlay" aria-hidden="true"></div>
     <div class="hero__content">
       <h1 class="hero__title">Travel Log</h1>
@@ -30,7 +30,6 @@
     <div class="map-wrapper__inner">
       <div id="mapdiv" role="presentation" aria-hidden="true"></div>
       <p class="visually-hidden">Visited countries: Belgium, Czechia, France, Germany, Ireland, Italy, Netherlands, Portugal, Russia, Spain, Switzerland, United Kingdom, Vatican City, Aruba, Bahamas, British Virgin Islands, Canada, Mexico, Puerto Rico, United States, U.S. Virgin Islands, Argentina, Brazil, Chile, Peru, South Africa, China, India, Japan, Nepal, Thailand, United Arab Emirates, Australia.</p>
-      <p class="map-note">Map rendered with <a href="https://www.amcharts.com/">amCharts</a>. Data reflects countries visited to date.</p>
     </div>
   </section>
 </main>
@@ -46,7 +45,7 @@
     const visitedCountries = [
       'BE', 'CZ', 'FR', 'DE', 'IE', 'IT', 'NL', 'PT', 'RU', 'ES', 'CH', 'GB', 'VA',
       'AW', 'BS', 'VG', 'CA', 'MX', 'PR', 'US', 'VI', 'AR', 'BR', 'CL', 'PE', 'ZA',
-      'CN', 'IN', 'JP', 'NP', 'TH', 'AE', 'AU'
+      'CN', 'IN', 'JP', 'NP', 'TH', 'AE', 'AU', 'SE','NO','SJ','JM','RO','GR','TR','KH'
     ];
 
     window.AmCharts.makeChart('mapdiv', {

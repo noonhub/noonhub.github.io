@@ -173,6 +173,14 @@ main {
   background-attachment: fixed, fixed;
 }
 
+.hero--travel {
+  background-image: url('../img/arches.jpeg');
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed, fixed;
+}
+
 .hero--aventura {
   background-size: cover;
   background-repeat: no-repeat;
