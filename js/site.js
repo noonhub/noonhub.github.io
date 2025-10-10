@@ -1,6 +1,17 @@
 (function () {
   const INCLUDE_ATTR = 'data-include';
 
+  function enableExecutableScripts(fragment) {
+    fragment.querySelectorAll('script').forEach((originalScript) => {
+      const executableScript = document.createElement('script');
+      Array.from(originalScript.attributes).forEach((attr) => {
+        executableScript.setAttribute(attr.name, attr.value);
+      });
+      executableScript.textContent = originalScript.textContent;
+      originalScript.replaceWith(executableScript);
+    });
+  }
+
   async function loadIncludes() {
     const includeNodes = Array.from(document.querySelectorAll(`[${INCLUDE_ATTR}]`));
 
@@ -24,7 +35,9 @@
           const markup = await response.text();
           const template = document.createElement('template');
           template.innerHTML = markup.trim();
-          node.replaceWith(template.content.cloneNode(true));
+          const fragment = template.content;
+          enableExecutableScripts(fragment);
+          node.replaceWith(fragment);
         } catch (error) {
           console.error(`Include load error for ${src}`, error);
         }
