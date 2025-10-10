@@ -96,6 +96,41 @@
     }
   }
 
+  function initChatbaseTriggers() {
+    const triggers = document.querySelectorAll('[data-chatbase-trigger]');
+    if (triggers.length === 0) {
+      return;
+    }
+
+    const activateChat = () => {
+      const { chatbase } = window;
+      if (typeof chatbase === 'function') {
+        try {
+          chatbase('open');
+          return true;
+        } catch (error) {
+          console.error('Chatbase open call failed', error);
+        }
+      }
+
+      const bubbleButton = document.getElementById('chatbase-bubble-button');
+      if (bubbleButton instanceof HTMLElement) {
+        bubbleButton.click();
+        return true;
+      }
+
+      return false;
+    };
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        activateChat();
+      });
+    });
+  }
+
+
   function init() {
     loadIncludes()
       .catch((error) => {
@@ -106,6 +141,7 @@
         initNavToggle();
         setActiveNavLink();
         updateYear();
+        initChatbaseTriggers();
       });
   }
 
