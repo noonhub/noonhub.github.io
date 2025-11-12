@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A running gallery of products and experiments built by Andrew Noonan.">
+  <title>Projects · Noonan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="canonical" href="https://noonan.cc/projects">
+  <meta property="og:title" content="Projects by Andrew Noonan" />
+  <meta property="og:description" content="Selected software projects, including the Arnold AI agent platform." />
+  <meta property="og:image" content="https://noonan.cc/img/home-preview.jpg" />
+  <meta property="og:url" content="https://noonan.cc/projects" />
+  <meta property="og:type" content="website" />
+  <script src="/js/site.js" defer></script>
+</head>
+<body class="page-projects" data-nav-current="projects">
+<div data-include="/partials/header.html"></div>
+<main>
+  <section class="hero hero--projects">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">Projects</h1>
+      <p class="hero__subtitle">A living collection of personal projects I have built.
+      </p>
+    </div>
+  </section>
+  <section class="section section--contrast" id="projects-gallery">
+    <div class="section__inner">
+      <h2 class="section__title">Featured Work</h2>
+      <div class="project-gallery">
+        <article class="project-card">
+          <div class="project-card__media" aria-hidden="true">
+            <span class="project-card__badge">AI Agents</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__label">AI Agent Platform</p>
+            <h3 class="project-card__title">Arnold</h3>
+            <p class="project-card__summary">Arnold runs domain-specific AI chat bots modeled after notable figures. They use retrieval-augmented generation, conversation memory, and profile building in order to tailor each coversation to you!</p>
+            <ul class="project-card__meta">
+              <li>Stack: Python, FastAPI, React, NextJS, Postgres, Minio, OpenAI</li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="button" href="https://arnold.noonan.cc" target="_blank" rel="noreferrer">Visit Arnold</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Andrew Noonan. All rights reserved.</p>
+</footer>
+</body>
+</html>

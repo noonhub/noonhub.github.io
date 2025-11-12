@@ -195,6 +195,10 @@ main {
   background-image: url('../img/arches-desktop.jpg');
 }
 
+.hero--projects {
+  background-image: linear-gradient(135deg, rgba(4, 17, 18, 0.88), rgba(9, 9, 9, 0.8)), url('../img/bg-masthead.jpg');
+}
+
 @media (max-width: 768px) {
   .hero {
     background-attachment: scroll, scroll;
@@ -210,6 +214,10 @@ main {
 
   .hero--noonisms {
     background-image: url('../img/arches-mobile.jpg');
+  }
+
+  .hero--projects {
+    background-image: linear-gradient(135deg, rgba(4, 17, 18, 0.9), rgba(9, 9, 9, 0.88)), url('../img/bg-masthead.jpg');
   }
 }
 
@@ -378,6 +386,81 @@ main {
 .section--light .social-list a:hover {
   border-color: var(--accent);
   color: var(--accent-strong);
+}
+
+.project-gallery {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: rgba(5, 5, 5, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.project-card__media {
+  position: relative;
+  min-height: 160px;
+  background: radial-gradient(circle at top right, rgba(66, 220, 163, 0.35), transparent 60%), linear-gradient(135deg, #0f2220, #060606);
+}
+
+.project-card__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  background: rgba(5, 5, 5, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+}
+
+.project-card__body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-card__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.project-card__title {
+  font-family: var(--font-sans);
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.project-card__summary {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.project-card__meta {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.project-card__actions {
+  margin-top: auto;
 }
 
 .footer {
