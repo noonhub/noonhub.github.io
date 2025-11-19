@@ -449,13 +449,13 @@ main {
 
 .project-card__summary {
   margin: 0;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
 }
 
 .project-card__meta {
   margin: 0;
   padding-left: 1.1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   font-size: 0.95rem;
 }
 
