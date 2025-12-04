@@ -170,7 +170,7 @@ main {
 
 .hero {
   position: relative;
-  min-height: min(75vh, 900px);
+  min-height: min(50vh, 700px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -408,8 +408,31 @@ main {
 
 .project-card__media {
   position: relative;
+  aspect-ratio: 16 / 9;
   min-height: 160px;
-  background: radial-gradient(circle at top right, rgba(36, 127, 235, 0.35), transparent 60%), linear-gradient(135deg, #0f2220, #060606);
+  background: linear-gradient(135deg, #0f2220, #060606);
+  overflow: hidden;
+}
+
+.project-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.project-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at top right, rgba(36, 127, 235, 0.35), transparent 60%), linear-gradient(135deg, rgba(15, 34, 32, 0.92), rgba(6, 6, 6, 0.94));
+  background-size: auto, auto;
+  background-position: top right, center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .project-card__badge {
@@ -424,6 +447,7 @@ main {
   background: rgba(5, 5, 5, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
+  z-index: 2;
 }
 
 .project-card__body {
